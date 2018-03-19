@@ -16,6 +16,8 @@
 		430C9F47205F559D0073446F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430C9F46205F559D0073446F /* Assets.xcassets */; };
 		430C9F4A205F559D0073446F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430C9F48205F559D0073446F /* LaunchScreen.storyboard */; };
 		430C9F4D205F559D0073446F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 430C9F4C205F559D0073446F /* main.m */; };
+		430C9F56205F95970073446F /* WDBaseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 430C9F55205F95970073446F /* WDBaseScene.m */; };
+		430C9F5A205F96720073446F /* WD_MAP_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 430C9F59205F96720073446F /* WD_MAP_1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		430C9F49205F559D0073446F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430C9F4B205F559D0073446F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430C9F4C205F559D0073446F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		430C9F54205F95970073446F /* WDBaseScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDBaseScene.h; sourceTree = "<group>"; };
+		430C9F55205F95970073446F /* WDBaseScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDBaseScene.m; sourceTree = "<group>"; };
+		430C9F58205F96720073446F /* WD_MAP_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WD_MAP_1.h; sourceTree = "<group>"; };
+		430C9F59205F96720073446F /* WD_MAP_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WD_MAP_1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,8 @@
 		430C9F35205F559D0073446F /* WD_ZOO */ = {
 			isa = PBXGroup;
 			children = (
+				430C9F57205F964F0073446F /* MAP */,
+				430C9F53205F91250073446F /* Base */,
 				430C9F36205F559D0073446F /* AppDelegate.h */,
 				430C9F37205F559D0073446F /* AppDelegate.m */,
 				430C9F39205F559D0073446F /* GameScene.sks */,
@@ -80,6 +88,24 @@
 				430C9F4C205F559D0073446F /* main.m */,
 			);
 			path = WD_ZOO;
+			sourceTree = "<group>";
+		};
+		430C9F53205F91250073446F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				430C9F54205F95970073446F /* WDBaseScene.h */,
+				430C9F55205F95970073446F /* WDBaseScene.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		430C9F57205F964F0073446F /* MAP */ = {
+			isa = PBXGroup;
+			children = (
+				430C9F58205F96720073446F /* WD_MAP_1.h */,
+				430C9F59205F96720073446F /* WD_MAP_1.m */,
+			);
+			path = MAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430C9F56205F95970073446F /* WDBaseScene.m in Sources */,
 				430C9F3F205F559D0073446F /* GameScene.m in Sources */,
 				430C9F42205F559D0073446F /* GameViewController.m in Sources */,
+				430C9F5A205F96720073446F /* WD_MAP_1.m in Sources */,
 				430C9F4D205F559D0073446F /* main.m in Sources */,
 				430C9F38205F559D0073446F /* AppDelegate.m in Sources */,
 			);

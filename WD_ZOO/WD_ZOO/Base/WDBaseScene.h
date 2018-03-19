@@ -1,5 +1,5 @@
 //
-//  GameScene.h
+//  WDBaseScene.h
 //  WD_ZOO
 //
 //  Created by 吴冬 on 2018/3/19.
@@ -8,8 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameScene : SKScene
-
-- (void)pinchAction:(CGFloat)pinch;
+@interface WDBaseScene : SKScene
 
 @end

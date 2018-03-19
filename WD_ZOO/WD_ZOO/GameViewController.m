@@ -10,16 +10,28 @@
 #import "GameScene.h"
 
 @implementation GameViewController
-
+{
+    GameScene *scene;
+    CGFloat   _last;
+    CGFloat   _lastScale;
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    //初始化数据
+    _lastScale = 1;
+    _last      = 1;
+    
+    
+    
     // Load the SKScene from 'GameScene.sks'
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+    scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
     
     // Set the scale mode to scale to fit the window
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
+    scene.name = @"hahaha";
     SKView *skView = (SKView *)self.view;
     
     // Present the scene
@@ -27,7 +39,37 @@
     
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
+    
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    pinch.delegate = self;
+    [self.view addGestureRecognizer:pinch];
+    
 }
+
+- (void)pinch:(UIPinchGestureRecognizer *)pinch{
+    
+    if (pinch.scale > 1) {
+        _lastScale = pinch.scale - _last + _lastScale;
+        if (_lastScale > 3.0) {
+            _lastScale = 3;
+        }
+        [scene pinchAction:_lastScale];
+    }else{
+        _lastScale = _lastScale - (_last - pinch.scale);
+        if (_lastScale < 0.5) {
+            _lastScale = 0.5;
+        }
+        [scene pinchAction:_lastScale];
+    }
+    
+    _last = pinch.scale;
+    if (pinch.state == UIGestureRecognizerStateEnded) {
+        _last = 1;
+    }
+    
+}
+
+
 
 - (BOOL)shouldAutorotate {
     return YES;
