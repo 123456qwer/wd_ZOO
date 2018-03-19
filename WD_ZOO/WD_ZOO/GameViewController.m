@@ -66,7 +66,6 @@
     if (pinch.state == UIGestureRecognizerStateEnded) {
         _last = 1;
     }
-    
 }
 
 
